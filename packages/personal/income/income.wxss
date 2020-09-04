@@ -1,0 +1,49 @@
+.order-list{
+  padding-bottom: 160rpx
+}
+.order-list .item{
+  background: #fff;
+  margin-bottom: 30rpx;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #dee2e9;
+  position: relative;
+}
+.order-list .item .left{
+  float: left;
+  width: 250rpx;
+}
+.order-list .item .right{
+  width: calc(100% - 250rpx);
+  float:left;
+}
+.order-list .item .right .address{
+  padding-left: 24rpx;
+  position: relative;
+}
+.order-list .item .right .address::before{
+  content: "";
+  position: absolute;
+  top: 8rpx;
+  left: 0;
+  background: #00cc66;
+  border-radius: 50%;
+  width: 18rpx;
+  height: 18rpx;
+}
+.order-list .item .right .address.addressEnd::before{
+  background: #ff6600;
+}
+.order-list .item .state{
+  position: absolute;
+  height: 60rpx;
+  right: 24rpx;
+  top: 30rpx;
+  z-index: 2;
+}
+.picker{
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  background: #fff;
+  margin: 20rpx 0;
+}

@@ -1,0 +1,54 @@
+<view class="content-title">订单信息</view>
+<view class='comlist' style="margin:0;">
+  <view class="item address clearfix">
+    <view class="text-icon ji fl">寄</view>
+    <view class='input-text' bindtap="toEditAddress" data-type="1">
+      <view class="fs_26">{{info.consigneeName}}  {{info.consigneeLinkmanName}}  {{info.consigneeBill?info.consigneeBill:info.consigneeTelephone }}</view>
+      <view class="fs_26">{{info.cityStartName}}</view>
+    <image class="address-icon" src="/common/images/u2513.png" catchtap="phoneCall" data-phone="{{info.consigneeBill}}"></image>
+    </view>
+  </view>
+  <view class="item address clearfix">
+    <view class="text-icon fl" style="background:#f67317;">收</view>
+    <view class='input-text' bindtap="toEditAddress" data-type="2">
+      <view class="fs_26">{{info.consigneeName}}  {{info.consigneeLinkmanName}}  {{info.consigneeBill?info.consigneeBill:info.consigneeTelephone }}</view>
+      <view class="fs_26">{{info.cityEndName}}</view>
+    </view>
+    <image class="address-icon" src="/common/images/u2513.png" catchtap="phoneCall" data-phone="{{info.consigneeBill}}"></image>
+  </view>
+</view>
+<view class="order-content">
+  <view class="particular clearfix">
+    <view class="content">
+      <view class="content-item clearfix">
+        <view class="label">货品名称</view>
+        <view class="text">服饰</view>
+      </view>
+      <view class="content-item clearfix">
+        <view class="label">预估</view>
+        <view class="text">50公斤/0.0188方</view>
+      </view>
+      <view class="content-item clearfix">
+        <view class="label">运费</view>
+        <view class="text red">10.00</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="content-title">收款码</view>
+<view class="payContent">
+  <view class="fee">运费：<text class="red">¥10</text></view>
+  <view class="tip">
+    <image src="/common/images/wxpay.png" mode="widthFix"></image>
+    <text>微信支付</text>
+  </view>
+  <view class="payCode">
+    <view class="link" bindtap="initCode" wx:if="{{!showCode}}">生成付款二维码</view>
+    <view class="shadow" bindtap="initCode" wx:if="{{refreshCode}}"><text class="link">刷新二维码</text></view>
+    <image src="{{code_url}}" mode="widthFix"></image>
+  </view>
+</view>
+<view class="page-bottom-btn">
+  <button class="fl cancel">取消</button>
+  <button class="fr success" bindtap="doPay">代客支付</button>
+</view>

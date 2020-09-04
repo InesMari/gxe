@@ -1,0 +1,19 @@
+
+<view class="navigator">
+  <view class="item" bindtap="toHome">
+    <image src="../../images/u114.png" mode="widthFix"></image>
+    <view>首页</view>
+  </view>
+  <view class="item" bindtap="toStorage">
+    <image src="../../images/u54.png" mode="widthFix"></image>
+    <view style="text-indent: -12rpx;">运单广场</view>
+  </view>
+  <view class="item" bindtap="toPlan">
+    <image src="../../images/u656.png" mode="widthFix"></image>
+    <view>运力计划</view>
+  </view>
+  <view class="item" bindtap="toPersonal">
+    <image src="../../images/u52.png" mode="widthFix"></image>
+    <view>我的</view>
+  </view>
+</view>

@@ -1,0 +1,117 @@
+<view class="content-title">订单信息</view>
+<view class='comlist' style="margin:0;">
+  <view class="item address clearfix">
+    <view class="text-icon ji fl">寄</view>
+    <view class='input-text' bindtap="toEditAddress" data-type="1">
+      <view class="fs_26">{{info.consigneeName}}  {{info.consigneeLinkmanName}}  {{info.consigneeBill?info.consigneeBill:info.consigneeTelephone }}</view>
+      <view class="fs_26">{{info.cityStartName}}</view>
+    <image class="address-icon" src="/common/images/u2513.png" catchtap="phoneCall" data-phone="{{info.consigneeBill}}"></image>
+    </view>
+  </view>
+  <view class="item address clearfix">
+    <view class="text-icon fl" style="background:#f67317;">收</view>
+    <view class='input-text' bindtap="toEditAddress" data-type="2">
+      <view class="fs_26">{{info.consigneeName}}  {{info.consigneeLinkmanName}}  {{info.consigneeBill?info.consigneeBill:info.consigneeTelephone }}</view>
+      <view class="fs_26">{{info.cityEndName}}</view>
+    </view>
+    <image class="address-icon" src="/common/images/u2513.png" catchtap="phoneCall" data-phone="{{info.consigneeBill}}"></image>
+  </view>
+</view>
+<view class="order-content">
+  <view class="particular clearfix">
+    <view class="content">
+      <view class="content-item clearfix">
+        <view class="label">货品名称</view>
+        <view class="text">服饰</view>
+      </view>
+      <view class="content-item clearfix">
+        <view class="label">预估</view>
+        <view class="text">50公斤/0.0188方</view>
+      </view>
+      <view class="content-item clearfix">
+        <view class="label">运费</view>
+        <view class="text red">10.00</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="content-title">揽收信息</view>
+<view class='comlist mt_20 clearfix'>
+  <view class='item clearfix'>
+    <view class="item-order">
+      <view class='label'>快递单号</view>
+      <view class='input-text'>
+        <input value="{{info.purchaseNum}}" data-key="purchaseNum" bindinput="inputSetData" type="number" maxlength="10"></input>
+        <image class="scan" bindtap="getCode" src="/common/images/u742.png"></image>
+      </view>
+    </view>
+    <view class="item-add">
+      <image src="/common/images/u307.png"></image>
+    </view>
+  </view>
+</view>
+<view class="volumeList mt_20 clearfix">
+  <view class="item">
+    <view class="label">揽件重量</view>
+    <view class="input-text">
+      <input placeholder-class="placeholder-class" placeholder="公斤" value="{{info.packageNumber}}" data-key="packageNumber" bindinput="inputSetData" type="number"></input>
+    </view>
+  </view>
+  <view class="item">
+    <view class="label">揽件体积</view>
+    <view class="input-text">
+      <input placeholder-class="placeholder-class" placeholder="方" value="{{info.packageWeight}}" data-key="packageWeight" bindinput="inputSetData" type="digit"></input>
+    </view>
+  </view>
+</view>
+<view class="volumeList clearfix">
+  <view class="item">
+    <view class="label">保价</view>
+    <view class="input-text">
+      <input placeholder-class="placeholder-class" placeholder="元" value="{{info.packageNumber}}" data-key="packageNumber" bindinput="inputSetData" type="number"></input>
+    </view>
+  </view>
+  <view class="item">
+    <view class="label">代收货款</view>
+    <view class="input-text">
+      <input placeholder-class="placeholder-class" placeholder="元" value="{{info.packageWeight}}" data-key="packageWeight" bindinput="inputSetData" type="digit"></input>
+    </view>
+  </view>
+</view>
+<view class='comlist mt_20 clearfix'>
+  <view class='item clientFee'>
+    <view class='label'>需收客户费用<text class="red">（现付）</text></view>
+    <view class='input-text'>
+      <input value="{{info.purchaseNum}}" data-key="purchaseNum" bindinput="inputSetData" type="number" maxlength="10"></input>
+      <view class="unit">元</view>
+    </view>
+  </view>
+</view>
+<view class='comlist mt_20 clearfix' style="margin-bottom:0;">
+  <view class='item'>
+    <view class='label'>我的收入</view>
+    <view class='input-text'>
+      <input value="{{info.purchaseNum}}" data-key="purchaseNum" bindinput="inputSetData" type="number" maxlength="10"></input>
+      <view class="unit">元</view>
+    </view>
+  </view>
+</view>
+<headerRemind>首重5，续价2，保费    元，代收货款手续费    元</headerRemind>
+
+<view class='comlist mt_20'>
+  <view class='item img-item'>
+    <view class='label'>揽收图片</view>
+    <view class='img-box'>
+      <chooseImage></chooseImage>
+    </view>
+  </view>
+</view>
+<view class='comlist mt_20'>
+  <view class='item item-br'>
+    <view class='label'>备注</view>
+    <view class='textarea'>
+      <textarea data-key="customerRemarks" bindinput="inputSetData" value="{{info.customerRemarks}}"></textarea>
+    </view>
+  </view>
+</view>
+<button class="b-btn">保存</button>

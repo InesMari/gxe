@@ -1,0 +1,179 @@
+@import '/common/css/order.wxss';
+page{
+  height: 100%;
+}
+.fixBtn{
+  background: #00cc66;
+  border-radius: 50%;
+  color:#fff;
+  width: 90rpx;
+  height: 90rpx;
+  position: fixed;
+  top: 48%;
+  right: 20rpx;
+  z-index: 9;
+  box-sizing: border-box;
+  padding: 12rpx 10rpx;
+  font-weight: bold;
+  text-align: center;
+}
+.scorll{
+  height: calc(100% - 211rpx);
+}
+.search-box{
+  height: 80rpx;
+  padding: 0 80rpx;
+  background: #fff;
+  box-sizing: border-box;
+  position: relative;
+  border-bottom:1rpx solid #dee2e9;  
+}
+.search-box input{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.search-box .search-icon{
+  position: absolute;
+  left: 30rpx;
+  top: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.search-box .scan-icon{
+  position: absolute;
+  right: 30rpx;
+  top: 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.list .item{
+  background: #fff;
+  margin-bottom: 20rpx;
+  border-bottom:1rpx solid #dee2e9;
+}
+.order-content .sites{
+  padding: 20rpx 30rpx;
+}
+.order-content .sites-left{
+  float: left;
+  width: calc(100% - 130rpx);
+}
+.order-content .sites-left>view{
+  line-height: 45rpx;
+}
+.order-content .sites .weight{
+  line-height: 45rpx;
+  color: #ff6600;
+  float: right;
+}
+.particular{
+  padding: 20rpx 30rpx 20rpx 76rpx;
+}
+.particular .content{
+  width: calc(100% - 180rpx);
+  float: left;
+}
+.particular .content.noCutdown{
+  width: 100%;
+}
+.particular .content-item{
+  position: relative;
+}
+.particular .content-item .label{
+  float: left;
+  width: 120rpx;
+  font-size: 26rpx;
+  line-height: 45rpx;
+}
+.particular .content-item .text{
+  float: left;
+  font-size: 26rpx;
+  line-height: 45rpx;
+  width: calc(100% - 120rpx);
+}
+.particular .content-item .text image{
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+.particular .content-item .sign{
+  position: absolute;
+  top:6rpx;
+  left: -40rpx;
+  height: 30rpx;
+  width:30rpx;
+  border-radius: 50%;
+  color:#fff;
+  font-size: 20rpx;
+  line-height: 30rpx;
+  text-align: center;
+  background: #0aac2c;
+}
+.particular .content-item.consignee .sign{
+  background: #ff6600;
+}
+.particular .countdown{
+  float: right;
+  line-height: 45rpx;
+  color:#ff6600;
+}
+.list .bottom-btn{
+  padding: 12rpx 30rpx;
+  border-top:1rpx solid #dee2e9;
+}
+.loading-icon{
+  width: 30rpx;
+  margin:20rpx auto;
+}
+.order-info .countdown{
+  float: right;
+  line-height: 120rpx;
+  color:#ff6600;
+}
+
+.comlist .address.item{
+  height: auto;
+  min-height: 100rpx;
+  line-height: 100rpx;
+  border:none;
+  margin:0;
+}
+.comlist .address .text-icon{
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border-radius: 50%;
+  background: #5bc240;
+  text-align: center;
+  margin:35rpx 10rpx 0 0; 
+  font-size: 24rpx;
+  color: #fff;
+}
+.comlist .address .label{
+  width: 180rpx;
+}
+.comlist .address .input-text{
+  width: calc(100% - 60rpx);
+  padding: 10rpx 50rpx 10rpx 0;
+  line-height: 40rpx;
+  box-sizing: border-box;
+  margin:0;
+  height: auto;
+  position: initial;
+}
+.comlist .address .input-text>view{
+  /* white-space: nowrap;  
+  text-overflow: ellipsis;
+  overflow: hidden; */
+  width: 100%;
+}
+.comlist .address .address-icon{
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  top: 20rpx;
+  right: 24rpx;
+  z-index: 10;
+}

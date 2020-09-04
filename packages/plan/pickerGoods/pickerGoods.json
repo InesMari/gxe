@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "chooseImage": "/common/components/chooseImage/chooseImage",
+    "headerRemind": "/common/components/header-remind/headerRemind"
+  }
+}
